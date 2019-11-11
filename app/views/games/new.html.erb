@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>New Game</h1>
+
+  <div class="letters">
+    <%= @letters[0] %>
+    <%= @letters[1] %>
+    <%= @letters[2] %>
+    <%= @letters[3] %>
+    <%= @letters[4] %>
+    <%= @letters[5] %>
+    <%= @letters[6] %>
+    <%= @letters[7] %>
+    <%= @letters[8] %>
+  </div>
+
+  <form action="/score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="text" name="word" placeholder="what's your longest word?">
+    <input type="submit" value="Play" class="button">
+  </form>
+
+</div>
